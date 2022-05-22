@@ -6,8 +6,13 @@ using UnityEngine.UI;
 public class InstantiateClon : MonoBehaviour
 {
 
-    public GameObject cubePrefab;
-    public Text maxcant;
+    public GameObject cube;
+    int cantidad = 0;
+    GameObject clone;
+    public Text clonemaxamount;
+    public Text lbl;
+    int clonea;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,17 +26,31 @@ public class InstantiateClon : MonoBehaviour
         
     }
 
-    public void InstantiateTheClone()
+    public void clonar()
     {
-        GameObject clon;
-
-        for (int i = 0; i < (int.Parse(maxcant.text)); i++)
+        if (clonemaxamount.text != "")
         {
-            clon = Instantiate (cubePrefab);
+
+            clonea = (int.Parse(clonemaxamount.text));
+
+            if (cantidad < clonea)
+            {
+
+                clone = Instantiate(cube);
+                cantidad++;
+                lbl.text = (clonea - cantidad).ToString();
+
+            }
+            else
+            {
+                lbl.text = ("Ya ingreso la cantidad maxima");
+            }
         }
-        
-
-
+        else
+        {
+            lbl.text = ("Ingrese una cantidad valida");
+        }
     }
+
 
 }

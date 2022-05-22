@@ -257,13 +257,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 144413942}
   m_TextComponent: {fileID: 1560830811}
   m_Placeholder: {fileID: 1108005543}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -470,7 +470,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1099622053}
-        m_MethodName: InstantiateTheClone
+        m_MethodName: clonar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -544,8 +544,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12189bd9eb9f8af48aa5153ab50f60fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubePrefab: {fileID: 8071845557522744409, guid: aaa863dcb57f0be47aba9d5eb7cdafbe,
-    type: 3}
+  cube: {fileID: 8071845557522744409, guid: aaa863dcb57f0be47aba9d5eb7cdafbe, type: 3}
+  cloneamount: {fileID: 1560830811}
+  lbl: {fileID: 1626552538}
 --- !u!4 &1099622054
 Transform:
   m_ObjectHideFlags: 0
@@ -628,7 +629,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter text...
+  m_Text: Ingresa la cantidad maxima
 --- !u!222 &1108005544
 CanvasRenderer:
   m_ObjectHideFlags: 0
